@@ -1,0 +1,205 @@
+/* =========================================================
+   layout.css — Grid/flex containers, section wrappers
+   ========================================================= */
+
+/* ── Base ── */
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-base);
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--sp-4);
+  z-index: var(--z-toast);
+  padding: var(--sp-3) var(--sp-6);
+  background: var(--clr-gold);
+  color: var(--clr-bg);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  border-radius: var(--radius-md);
+  letter-spacing: var(--ls-wide);
+  transition: top var(--transition-fast);
+}
+.skip-link:focus {
+  top: var(--sp-4);
+  outline: 2px solid var(--clr-bg);
+  outline-offset: 2px;
+}
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* ── Section wrapper ── */
+.section {
+  padding-block: var(--section-pad);
+  position: relative;
+}
+
+.section--alt {
+  background-color: var(--clr-bg-alt);
+}
+
+.section--surface {
+  background-color: var(--clr-surface);
+}
+
+/* ── Section header ── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--sp-16);
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: var(--sp-4);
+}
+
+.section-title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--clr-text);
+  margin-bottom: var(--sp-6);
+}
+
+.section-subtitle {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-light);
+  color: var(--clr-text-muted);
+  max-width: 600px;
+  margin-inline: auto;
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+  justify-content: center;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 48px;
+  background: linear-gradient(to right, transparent, var(--clr-gold-muted));
+}
+
+.divider::after {
+  background: linear-gradient(to left, transparent, var(--clr-gold-muted));
+}
+
+.divider-icon {
+  color: var(--clr-gold);
+  font-size: var(--fs-lg);
+  line-height: 1;
+}
+
+/* ── Grid helpers ── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-8);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-8);
+}
+
+/* ── Flex helpers ── */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Gold horizontal rule ── */
+.gold-rule {
+  border: none;
+  border-top: 1px solid var(--clr-border);
+  margin: 0;
+}
+
+/* ── Decorative ornament ── */
+.ornament {
+  display: block;
+  text-align: center;
+  color: var(--clr-gold-muted);
+  font-size: var(--fs-xl);
+  margin-block: var(--sp-4);
+  letter-spacing: 0.5em;
+  opacity: 0.6;
+}
+
+/* ── Scroll-reveal animation states ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger children */
+.stagger-children > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-children > *:nth-child(2) { transition-delay: 100ms; }
+.stagger-children > *:nth-child(3) { transition-delay: 200ms; }
+.stagger-children > *:nth-child(4) { transition-delay: 300ms; }
+.stagger-children > *:nth-child(5) { transition-delay: 400ms; }
+.stagger-children > *:nth-child(6) { transition-delay: 500ms; }

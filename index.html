@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080807" />
+  <title>Saffron & Smoke — Indian Fine Dining</title>
+  <meta name="description" content="Saffron & Smoke is Mumbai's most acclaimed Indian fine dining restaurant. Experience seven-course tasting menus where ancient spices meet modern artistry. Reserve your table today." />
+  <meta name="keywords" content="Indian fine dining, tasting menu, Mumbai restaurant, Michelin, saffron, modern Indian cuisine, luxury dining" />
+  <meta name="author" content="Saffron & Smoke" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Saffron & Smoke — Indian Fine Dining" />
+  <meta property="og:description" content="Where ancient spices meet modern artistry. Seven-course tasting menus in a setting of understated luxury." />
+  <meta property="og:image" content="assets/images/hero-bg.jpg" />
+  <meta property="og:url" content="https://saffronandsmoke.in" />
+  <meta property="og:site_name" content="Saffron & Smoke" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Saffron & Smoke — Indian Fine Dining" />
+  <meta name="twitter:description" content="Where ancient spices meet modern artistry." />
+  <meta name="twitter:image" content="assets/images/hero-bg.jpg" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🔥</text></svg>" />
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- JS (ES Module) -->
+  <script type="module" src="js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- ═══════════════════════════════
+       SKIP LINK
+       ═══════════════════════════════ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════
+       HEADER / NAV
+       ═══════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Saffron &amp; Smoke — Home">
+        <span class="nav-logo-text">Saffron &amp; Smoke</span>
+        <span class="nav-logo-tagline">Fine Dining · Est. 2018</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about"        class="nav-link" data-section="about">About</a></li>
+        <li><a href="#chef"         class="nav-link" data-section="chef">Chef</a></li>
+        <li><a href="#dishes"       class="nav-link" data-section="dishes">Menu</a></li>
+        <li><a href="#gallery"      class="nav-link" data-section="gallery">Gallery</a></li>
+        <li><a href="#testimonials" class="nav-link" data-section="testimonials">Reviews</a></li>
+        <li><a href="#pricing"      class="nav-link" data-section="pricing">Menus</a></li>
+        <li><a href="#faq"          class="nav-link" data-section="faq">FAQ</a></li>
+        <li><a href="#contact"      class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <!-- Theme toggle -->
+        <button
+          class="theme-toggle"
+          aria-label="Switch to light mode"
+          title="Toggle theme"
+          id="theme-toggle"
+        >
+          <!-- Sun icon (shown in light mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <!-- Moon icon (shown in dark mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- Reserve CTA (desktop only) -->
+        <a href="#contact" class="btn btn-primary btn-sm nav-reserve">
+          Reserve a Table
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button
+          class="hamburger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          id="hamburger"
+        >
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════
+       MOBILE NAV DRAWER
+       ═══════════════════════════════ -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="#about"        class="mobile-nav-link" data-section="about">About</a>
+    <a href="#chef"         class="mobile-nav-link" data-section="chef">Chef</a>
+    <a href="#dishes"       class="mobile-nav-link" data-section="dishes">Menu</a>
+    <a href="#gallery"      class="mobile-nav-link" data-section="gallery">Gallery</a>
+    <a href="#testimonials" class="mobile-nav-link" data-section="testimonials">Reviews</a>
+    <a href="#pricing"      class="mobile-nav-link" data-section="pricing">Menus &amp; Pricing</a>
+    <a href="#faq"          class="mobile-nav-link" data-section="faq">FAQ</a>
+    <a href="#contact"      class="mobile-nav-link" data-section="contact">Contact</a>
+    <a href="#contact" class="btn btn-primary mobile-nav-cta">Reserve a Table</a>
+  </nav>
+
+  <!-- ═══════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <img
+          class="hero-bg-img"
+          src="assets/images/hero-bg.jpg"
+          alt=""
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow" aria-hidden="true">
+          <span class="hero-eyebrow-line"></span>
+          Mumbai's Most Celebrated Table
+          <span class="hero-eyebrow-line"></span>
+        </p>
+
+        <h1 class="hero-title" id="hero-title">
+          Saffron &amp; <span class="hero-title-accent">Smoke</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Where ancient spices meet modern artistry.
+          Seven courses of India's finest traditions, reimagined.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">Reserve Your Table</a>
+          <a href="#dishes"  class="btn btn-outline btn-lg">Explore the Menu</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-mouse">
+          <div class="scroll-mouse-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AWARDS / PRESS BAR ── -->
+    <div class="awards-bar" aria-label="Awards and press recognition">
+      <div class="awards-bar-inner">
+        <div class="award-item">
+          <span class="award-icon" aria-hidden="true">🏆</span>
+          <span class="award-text">Best Restaurant, India — <em>Condé Nast Traveller 2025</em></span>
+        </div>
+        <span class="award-sep" aria-hidden="true">✦</span>
+        <div class="award-item">
+          <span class="award-icon" aria-hidden="true">⭐</span>
+          <span class="award-text">One Star — <em>Asia's 50 Best Restaurants 2024</em></span>
+        </div>
+        <span class="award-sep" aria-hidden="true">✦</span>
+        <div class="award-item">
+          <span class="award-icon" aria-hidden="true">🌿</span>
+          <span class="award-text">Recommended — <em>Michelin Guide Mumbai 2025</em></span>
+        </div>
+        <span class="award-sep" aria-hidden="true">✦</span>
+        <div class="award-item">
+          <span class="award-icon" aria-hidden="true">🎖️</span>
+          <span class="award-text">Chef of the Year — <em>Times Food Awards 2024</em></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ABOUT ── -->
+    <section id="about" class="section section--alt" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Image column -->
+          <div class="reveal-left">
+            <div class="about-image-wrap">
+              <img
+                class="about-image"
+                src="assets/images/about-restaurant.jpg"
+                alt="The opulent Saffron & Smoke dining room with Mughal-inspired gold architectural details and candlelit tables"
+                width="800"
+                height="1000"
+                loading="lazy"
+              />
+              <div class="about-image-badge">
+                <span class="about-badge-number">6</span>
+                <span class="about-badge-label">Years of<br>Excellence</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content column -->
+          <div class="about-content reveal-right">
+            <p class="section-eyebrow">Our Story</p>
+            <div class="divider" aria-hidden="true">
+              <span class="divider-icon">✦</span>
+            </div>
+            <h2 class="section-title" id="about-title">
+              A Love Letter to<br>Indian Cuisine
+            </h2>
+            <p class="about-lead">
+              Born from a single conviction: that Indian food deserves a place at the world's finest tables, with the ceremony and reverence it has always merited.
+            </p>
+            <p class="about-body">
+              Chef Aryan Malhotra spent twelve years in the kitchens of Paris, Tokyo, and New York before returning home with a burning question — what if we applied the precision of French technique and the restraint of Japanese plating to the breathtaking complexity of Indian spice?
+            </p>
+            <p class="about-body">
+              The answer became Saffron & Smoke. Every dish is a dialogue between centuries-old Mughal recipes, regional Indian traditions, and the sharp intuition of a kitchen that has never stopped asking "what if?"
+            </p>
+
+            <div class="about-stats">
+              <div>
+                <span class="about-stat-number">92</span>
+                <span class="about-stat-label">Spices in the Galouti</span>
+              </div>
+              <div>
+                <span class="about-stat-number">7</span>
+                <span class="about-stat-label">Course Tasting Menu</span>
+              </div>
+              <div>
+                <span class="about-stat-number">3×</span>
+                <span class="about-stat-label">Best Restaurant Award</span>
+              </div>
+            </div>
+
+            <a href="#pricing" class="btn btn-outline" style="align-self:flex-start;margin-top:var(--sp-4)">
+              View Tasting Menus
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CHEF SPOTLIGHT ── -->
+    <section id="chef" class="section section--alt chef-section" aria-labelledby="chef-title">
+      <div class="container">
+        <div class="chef-grid">
+
+          <!-- Image column -->
+          <div class="chef-image-col reveal-left">
+            <div class="chef-image-wrap">
+              <img
+                class="chef-image"
+                src="assets/images/chef-aryan.jpg"
+                alt="Chef Aryan Malhotra, Executive Chef of Saffron &amp; Smoke, in the kitchen"
+                width="600"
+                height="800"
+                loading="lazy"
+              />
+              <div class="chef-image-decor" aria-hidden="true">
+                <span class="chef-decor-line chef-decor-line--top"></span>
+                <span class="chef-decor-line chef-decor-line--bottom"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content column -->
+          <div class="chef-content reveal-right">
+            <p class="section-eyebrow">The Visionary</p>
+            <div class="divider" aria-hidden="true"><span class="divider-icon">✦</span></div>
+            <h2 class="section-title" id="chef-title">Chef Aryan<br>Malhotra</h2>
+
+            <p class="chef-lead">
+              Three Michelin kitchens. Twelve years abroad. One burning question brought him home.
+            </p>
+
+            <blockquote class="chef-quote">
+              <span class="chef-quote-mark" aria-hidden="true">&ldquo;</span>
+              Indian cuisine is not a supporting act — it is the main stage. Every spice tells a story older than most nations. My work is simply to ensure that story is heard.
+              <span class="chef-quote-mark chef-quote-mark--close" aria-hidden="true">&rdquo;</span>
+            </blockquote>
+
+            <div class="chef-credentials">
+              <div class="chef-cred-item">
+                <span class="chef-cred-icon" aria-hidden="true">🏛️</span>
+                <div>
+                  <p class="chef-cred-title">Institut Paul Bocuse</p>
+                  <p class="chef-cred-sub">Lyon, France — Graduated with Distinction</p>
+                </div>
+              </div>
+              <div class="chef-cred-item">
+                <span class="chef-cred-icon" aria-hidden="true">🍴</span>
+                <div>
+                  <p class="chef-cred-title">Sous Chef — Le Bernardin</p>
+                  <p class="chef-cred-sub">New York · 3 Michelin Stars</p>
+                </div>
+              </div>
+              <div class="chef-cred-item">
+                <span class="chef-cred-icon" aria-hidden="true">🌸</span>
+                <div>
+                  <p class="chef-cred-title">Demi Chef de Partie — Narisawa</p>
+                  <p class="chef-cred-sub">Tokyo · World's 50 Best</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn-outline" style="align-self:flex-start;margin-top:var(--sp-6)">
+              Dine With the Chef
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SIGNATURE DISHES ── -->
+    <section id="dishes" class="section" aria-labelledby="dishes-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Signature Creations</p>
+          <div class="divider" aria-hidden="true"><span class="divider-icon">✦</span></div>
+          <h2 class="section-title" id="dishes-title">Chef's Masterpieces</h2>
+          <p class="section-subtitle">
+            Each dish is a testament to years of culinary exploration — familiar in soul, extraordinary in expression.
+          </p>
+        </header>
+
+        <!-- JS renders dish cards here -->
+        <div class="dishes-grid stagger-children" role="list" aria-label="Signature dishes"></div>
+      </div>
+    </section>
+
+    <!-- ── GALLERY ── -->
+    <section id="gallery" class="section section--alt" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">The Visual Journey</p>
+          <div class="divider" aria-hidden="true"><span class="divider-icon">✦</span></div>
+          <h2 class="section-title" id="gallery-title">A Feast for the Eyes</h2>
+          <p class="section-subtitle">
+            From the first amuse-bouche to the final petit four — every moment is designed to be remembered.
+          </p>
+        </header>
+
+        <!-- Filter buttons -->
+        <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+          <button class="gallery-filter-btn is-active" data-filter="all">All</button>
+          <button class="gallery-filter-btn" data-filter="starters">Starters</button>
+          <button class="gallery-filter-btn" data-filter="mains">Mains</button>
+          <button class="gallery-filter-btn" data-filter="desserts">Desserts</button>
+          <button class="gallery-filter-btn" data-filter="ambiance">Ambiance</button>
+        </div>
+
+        <!-- JS renders gallery items here -->
+        <div class="gallery-grid" role="list" aria-label="Food and restaurant gallery"></div>
+      </div>
+    </section>
+
+    <!-- Lightbox (portal) -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image lightbox"
+      aria-hidden="true"
+    >
+      <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="" width="1000" height="750" />
+        <p class="lightbox-caption"></p>
+        <p class="lightbox-counter" aria-live="polite"></p>
+      </div>
+      <button class="lightbox-close" aria-label="Close lightbox">✕</button>
+      <button class="lightbox-prev" aria-label="Previous image">←</button>
+      <button class="lightbox-next" aria-label="Next image">→</button>
+    </div>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section id="testimonials" class="section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Guest Voices</p>
+          <div class="divider" aria-hidden="true"><span class="divider-icon">✦</span></div>
+          <h2 class="section-title" id="testimonials-title">Words from Our Guests</h2>
+          <p class="section-subtitle">
+            The highest compliment we receive is a guest who returns — and brings someone they love.
+          </p>
+        </header>
+
+        <!-- JS renders testimonial cards here -->
+        <div class="testimonials-grid stagger-children" aria-label="Guest reviews"></div>
+      </div>
+    </section>
+
+    <!-- ── PRICING ── -->
+    <section id="pricing" class="section section--alt" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Tasting Menus</p>
+          <div class="divider" aria-hidden="true"><span class="divider-icon">✦</span></div>
+          <h2 class="section-title" id="pricing-title">Choose Your Journey</h2>
+          <p class="section-subtitle">
+            All menus include an amuse-bouche, bread service, and mignardises. Prices are per person. Minimum two guests.
+          </p>
+        </header>
+
+        <!-- JS renders pricing cards here -->
+        <div class="pricing-grid stagger-children" aria-label="Tasting menu options"></div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Your Questions, Answered</p>
+          <div class="divider" aria-hidden="true"><span class="divider-icon">✦</span></div>
+          <h2 class="section-title" id="faq-title">Frequently Asked</h2>
+          <p class="section-subtitle">
+            Everything you need to know before your visit. Still curious? Call us directly.
+          </p>
+        </header>
+
+        <!-- JS renders accordion items here -->
+        <div class="faq-container" role="list" aria-label="Frequently asked questions"></div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact" class="section section--alt" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Make a Reservation</p>
+          <div class="divider" aria-hidden="true"><span class="divider-icon">✦</span></div>
+          <h2 class="section-title" id="contact-title">Reserve Your Evening</h2>
+          <p class="section-subtitle">
+            We look forward to welcoming you. For same-day bookings, please call us directly.
+          </p>
+        </header>
+
+        <div class="contact-layout reveal">
+
+          <!-- Info column -->
+          <aside class="contact-info" aria-label="Restaurant contact information">
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📍</div>
+              <div>
+                <p class="contact-info-label">Address</p>
+                <p class="contact-info-value">The Oberoi Grand, Level 3<br>Nariman Point, Mumbai 400 021</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📞</div>
+              <div>
+                <p class="contact-info-label">Reservations</p>
+                <p class="contact-info-value">
+                  <a href="tel:+912266441234" class="contact-info-value" style="text-decoration:underline;text-underline-offset:3px">
+                    +91 22 6644 1234
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">✉️</div>
+              <div>
+                <p class="contact-info-label">Email</p>
+                <p class="contact-info-value">
+                  <a href="mailto:reserve@saffronandsmoke.in" style="text-decoration:underline;text-underline-offset:3px">
+                    reserve@saffronandsmoke.in
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-hours">
+              <h3 class="contact-hours-title">Opening Hours</h3>
+              <div class="hours-row">
+                <span class="hours-day">Monday – Tuesday</span>
+                <span class="hours-time">Closed</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Wednesday – Thursday</span>
+                <span class="hours-time">7:00 PM – 11:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Friday – Saturday</span>
+                <span class="hours-time">6:30 PM – 11:30 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Sunday (Lunch)</span>
+                <span class="hours-time">12:30 PM – 3:30 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Sunday (Dinner)</span>
+                <span class="hours-time">7:00 PM – 10:30 PM</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Form column -->
+          <div class="contact-form" role="region" aria-label="Reservation request form">
+            <!-- Form content (shown by default) -->
+            <div class="form-fields">
+              <form id="contact-form" novalidate aria-label="Reservation request form">
+                <div class="form-grid">
+
+                  <div class="form-group">
+                    <label for="form-name" class="form-label">
+                      Full Name <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="form-name"
+                      name="name"
+                      class="form-input"
+                      placeholder="Your full name"
+                      autocomplete="name"
+                      required
+                      aria-required="true"
+                      aria-describedby="form-name-error"
+                    />
+                    <span id="form-name-error" class="form-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-email" class="form-label">
+                      Email Address <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="form-email"
+                      name="email"
+                      class="form-input"
+                      placeholder="you@example.com"
+                      autocomplete="email"
+                      required
+                      aria-required="true"
+                      aria-describedby="form-email-error"
+                    />
+                    <span id="form-email-error" class="form-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="form-phone"
+                      name="phone"
+                      class="form-input"
+                      placeholder="+91 98765 43210"
+                      autocomplete="tel"
+                      aria-describedby="form-phone-error"
+                    />
+                    <span id="form-phone-error" class="form-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-date" class="form-label">Preferred Date</label>
+                    <input
+                      type="date"
+                      id="form-date"
+                      name="date"
+                      class="form-input"
+                      aria-describedby="form-date-error"
+                    />
+                    <span id="form-date-error" class="form-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <div class="form-group col-span-2">
+                    <label for="form-guests" class="form-label">Number of Guests</label>
+                    <select id="form-guests" name="guests" class="form-select" aria-describedby="form-guests-error">
+                      <option value="">Select party size</option>
+                      <option value="2">2 guests</option>
+                      <option value="3">3 guests</option>
+                      <option value="4">4 guests</option>
+                      <option value="5">5 guests</option>
+                      <option value="6">6 guests</option>
+                      <option value="7-12">7–12 guests (Private Dining)</option>
+                    </select>
+                    <span id="form-guests-error" class="form-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <div class="form-group col-span-2">
+                    <label for="form-message" class="form-label">
+                      Special Requests or Occasions
+                    </label>
+                    <textarea
+                      id="form-message"
+                      name="message"
+                      class="form-textarea"
+                      placeholder="Dietary requirements, allergies, anniversary, birthday, wine preferences…"
+                      rows="4"
+                      aria-describedby="form-message-error"
+                    ></textarea>
+                    <span id="form-message-error" class="form-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                </div>
+
+                <div class="form-submit-wrap" style="margin-top:var(--sp-8)">
+                  <button type="submit" id="form-submit" class="btn btn-primary btn-lg">
+                    Request Reservation
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Success state (hidden until submission) -->
+            <div class="form-success" role="alert" aria-live="polite">
+              <div class="form-success-icon" aria-hidden="true">✓</div>
+              <h3 class="form-success-title">Request Received</h3>
+              <p class="form-success-msg">
+                Thank you for reaching out. Our reservations team will confirm your table within 2 hours. We look forward to welcoming you.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════
+       FOOTER
+       ═══════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <p class="footer-logo">Saffron &amp; Smoke</p>
+          <p class="footer-tagline">
+            Where ancient spices meet modern artistry.<br>
+            Fine dining rooted in India's extraordinary culinary heritage.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" class="footer-social-link" aria-label="Instagram" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter/X" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="footer-col-title">Navigate</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#about"        class="footer-link">Our Story</a></li>
+            <li><a href="#dishes"       class="footer-link">Signature Menu</a></li>
+            <li><a href="#gallery"      class="footer-link">Gallery</a></li>
+            <li><a href="#testimonials" class="footer-link">Reviews</a></li>
+            <li><a href="#pricing"      class="footer-link">Tasting Menus</a></li>
+            <li><a href="#faq"          class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Experiences -->
+        <div>
+          <h3 class="footer-col-title">Experiences</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#contact" class="footer-link">Private Dining</a></li>
+            <li><a href="#contact" class="footer-link">Corporate Events</a></li>
+            <li><a href="#contact" class="footer-link">Anniversary Dinners</a></li>
+            <li><a href="#contact" class="footer-link">Chef's Table</a></li>
+            <li><a href="#contact" class="footer-link">Wine Pairing</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact quick -->
+        <div>
+          <h3 class="footer-col-title">Find Us</h3>
+          <ul class="footer-links" role="list">
+            <li class="footer-link" style="cursor:default">The Oberoi Grand, Level 3</li>
+            <li class="footer-link" style="cursor:default">Nariman Point, Mumbai</li>
+            <li>
+              <a href="tel:+912266441234" class="footer-link">+91 22 6644 1234</a>
+            </li>
+            <li>
+              <a href="mailto:reserve@saffronandsmoke.in" class="footer-link">reserve@saffronandsmoke.in</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="gold-rule" />
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Saffron &amp; Smoke. All rights reserved.
+        </p>
+        <nav class="footer-bottom-links" aria-label="Legal links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Accessibility</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════
+       BACK TO TOP
+       ═══════════════════════════════ -->
+  <button class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- ═══════════════════════════════
+       FLOATING RESERVATION WIDGET
+       ═══════════════════════════════ -->
+  <div class="reservation-float" id="reservation-float" aria-hidden="true">
+    <div class="reservation-float-inner">
+      <div class="reservation-float-icon" aria-hidden="true">🪔</div>
+      <div class="reservation-float-text">
+        <p class="reservation-float-title">Book Your Evening</p>
+        <p class="reservation-float-sub">Limited tables available</p>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-sm reservation-float-cta">Reserve</a>
+      <button class="reservation-float-dismiss" aria-label="Dismiss reservation prompt" id="reservation-float-dismiss">✕</button>
+    </div>
+  </div>
+
+</body>
+</html>

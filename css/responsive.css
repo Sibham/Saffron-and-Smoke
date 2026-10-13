@@ -1,0 +1,179 @@
+/* =========================================================
+   responsive.css — Breakpoint overrides (mobile-first)
+   ========================================================= */
+
+/* ── 480px: Large phones ── */
+@media (min-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-actions {
+    gap: var(--sp-5);
+  }
+
+  .about-stats {
+    gap: var(--sp-12);
+  }
+}
+
+/* ── 640px: Large phones / small tablets ── */
+@media (min-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-group.col-span-2 {
+    grid-column: span 2;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ── 768px: Tablets ── */
+@media (min-width: 768px) {
+  /* Nav */
+  .hamburger { display: none; }
+  .mobile-nav { display: none !important; }
+  .nav-links { display: flex; }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-16);
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Contact */
+  .contact-layout {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  /* Dish cards */
+  .dishes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+/* ── 1024px: Small laptops ── */
+@media (min-width: 1024px) {
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Dishes */
+  .dishes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* About image badge */
+  .about-image-badge {
+    right: -24px;
+    bottom: -24px;
+  }
+
+  /* Reserve button in nav */
+  .nav-reserve { display: inline-flex; }
+
+  /* Chef grid */
+  .chef-grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--sp-16);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+/* ── 1280px: Desktop ── */
+@media (min-width: 1280px) {
+  :root {
+    --nav-height: 80px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-4);
+  }
+
+  .section-header {
+    margin-bottom: var(--sp-20);
+  }
+
+  /* Wide lightbox controls */
+  .lightbox-prev { left: var(--sp-8); }
+  .lightbox-next { right: var(--sp-8); }
+}
+
+/* ── Max width clamps for readability ── */
+@media (min-width: 1920px) {
+  :root {
+    --container-pad: 6rem;
+  }
+}
+
+/* ── Print styles ── */
+@media print {
+  .site-header,
+  .mobile-nav,
+  .back-to-top,
+  .hero-scroll-indicator,
+  .gallery-filters,
+  .lightbox {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .hero {
+    min-height: auto;
+    page-break-after: always;
+  }
+}
